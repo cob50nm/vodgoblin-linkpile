@@ -1,38 +1,98 @@
+
+:root{
+	--dark-tone : #1D2D50;
+	--mid-tone : #133B5C;
+	--light-tone : #1E5F74;
+	--highlight-tone : #FCDAB7;
+	--link-tone : #6DB1BF;
+	background-color : var(--mid-tone);
+	
+}
+
+
 .App {
   text-align: center;
+	background-color: "#1D2D50";
+	height : 100vh;
+	overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content{
+	display : flex;
+	flex-direction: row;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.banner{
+	background-color: var(--light-tone);
+	padding :1em;
+	font-size: 2em;
+	font-weight: bold;
+	color : var(--highlight-tone);
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.imgurLinksIntro{
+	color : var(--highlight-tone);
+	margin : 1em;
+	font-size: 1.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.unknownLinksIntro{
+	margin: 1em;
+	margin-top: 2em;
+	font-size: 1.5em;
+	color : var(--highlight-tone);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar{
+	min-height : 100vh;
+	width : 20vw;
+	background-color: var(--dark-tone);
+	font-size: 1.25em;
+	min-width: 140px;
+
+}
+
+.mainbody{
+	width: 80vw;
+}
+
+.expandable{
+	margin : 1em;
+}
+
+.fakeLink{
+	color : var(--link-tone);
+	text-decoration: underline ;
+}
+
+.fakeLink:hover{
+	color: var(--light-tone);
+}
+
+a:-webkit-any-link{
+	color: var(--link-tone);
+}
+a:-webkit-any-link:hover{
+	color: var(--light-tone);
+}
+
+.streamDate{
+	color : var(--highlight-tone);
+}
+.streamDate:hover{
+	color : var(--link-tone);
+}
+
+.streamDateHeader{
+	color : var(--light-tone);
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
+.footer{
+	color : var(--highlight-tone);
+	text-align: center;
+	padding : 0.5em;
+	font-size: 0.75em;
 }
