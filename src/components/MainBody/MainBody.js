@@ -47,20 +47,21 @@ export default function MainBody(props) {
 			Gobbos is not very good at reading, so these might not be pictures of tiny toys, but are links that were posted during the stream.
 		</div>
 		<List sx={{ color: theme.link }}>
-			{props.links.filter(item => item.type != "imgur")
-				.map((item, i) => {
-					// adding this bitly expander stuff because you shouldn't click random bitlys 
-					const isBitly = item.albumLink.indexOf("bit.ly") > -1;
-					const bitlyExpander = isBitly ? "+" : "";
-					const bitlyExplainer = isBitly ? "(This link will take you to bitly so you can see where it goes.)" : "";
-					return (
-						<ListItem button key={i} onClick={() => openInNewTab(`${item.albumLink}${bitlyExpander}`)}>
-							<div className={"fakeLink"}>{item.albumLink}{bitlyExpander}&nbsp;{bitlyExplainer}</div>
-						</ListItem>
-					)
-				})}
+			{// TODO : should have some sort of "no unknown links" message here
+				props.links.filter(item => item.type != "imgur")
+					.map((item, i) => {
+						// adding this bitly expander stuff because you shouldn't click random bitlys 
+						const isBitly = item.albumLink.indexOf("bit.ly") > -1;
+						const bitlyExpander = isBitly ? "+" : "";
+						const bitlyExplainer = isBitly ? "(This link will take you to bitly so you can see where it goes.)" : "";
+						return (
+							<ListItem button key={i} onClick={() => openInNewTab(`${item.albumLink}${bitlyExpander}`)}>
+								<div className={"fakeLink"}>{item.albumLink}{bitlyExpander}&nbsp;{bitlyExplainer}</div>
+							</ListItem>
+						)
+					})}
 		</List>
-		<div className="footer">This site is pretty rough and ready, source code will be available on my(cob50nm) github soon™ if anyone wants to make it look good</div>
+		<div className="footer">This site is pretty rough and ready, source code is available on my(cob50nm) github if anyone wants to make it look good</div>
 	</div >)
 }
 

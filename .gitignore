@@ -24,3 +24,8 @@ yarn-error.log*
 
 #configuration stuff 
 secrets.js
+
+#firebase hosting config stuff
+.firebaserc
+firebase.json
+hosting.*

@@ -74,7 +74,6 @@ function App() {
 					setLinkData(data);
 				})
 		}
-
 	}
 
 	return (
